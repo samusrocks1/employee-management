@@ -1,4 +1,6 @@
-public class employee {
+import java.io.Serializable;
+
+public class employee implements Serializable {
     private int employeeId;
     private int dayOfBirth;
     private int monthOfBirth;
@@ -12,14 +14,16 @@ public class employee {
     private String state;
     private int zipCode;
     private char sex;
-    private int phoneNumber;
+    private String phoneNumber;
     private String title;
     private double numberOfHours;
     private double sickTime;
     private String firstName;
     private String lastName;
+    private double hourlyPay;
 
-    public employee(int employeeId, int dayOfBirth, int monthOfBirth, int yearOfBirth, int dayOfStart, int monthOfStart, int yearOfStart, String streetAddress, String city, String state, int zipCode, char sex, int phoneNumber, String title, String firstName, String lastName) {
+    public employee(int employeeId, int dayOfBirth, int monthOfBirth, int yearOfBirth, int dayOfStart, int monthOfStart, int yearOfStart,
+                    String streetAddress, String city, String state, int zipCode, char sex, String phoneNumber, String title, String firstName, String lastName, double hourlyPay) {
         this.employeeId = employeeId;
         this.dayOfBirth = dayOfBirth;
         this.monthOfBirth = monthOfBirth;
@@ -34,11 +38,17 @@ public class employee {
         this.sex = sex;
         this.phoneNumber = phoneNumber;
         this.title = title;
-        this.yearsService = 0;
-        this.numberOfHours = 0;
-        this.sickTime = 0;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.hourlyPay = hourlyPay;
+        this.numberOfHours = 0;
+        this.sickTime = 0;
+        this.yearsService = 0;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
     public String getFirstName() {
@@ -161,11 +171,11 @@ public class employee {
         this.sex = sex;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 
@@ -194,5 +204,13 @@ public class employee {
     }
 
     public employee() {
+    }
+
+    public double getHourlyPay() {
+        return hourlyPay;
+    }
+
+    public void setHourlyPay(double hourlyPay) {
+        this.hourlyPay = hourlyPay;
     }
 }

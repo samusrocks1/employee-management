@@ -1,27 +1,28 @@
-public class fullTime extends employee{
-    private double hourlyPay;
+import java.io.Serializable;
+
+public class fullTime extends employee implements Serializable {
     private double vacationTime;
     private double personalTime;
     private boolean receivesHealth;
     private boolean receivesRetirement;
     private boolean overTimeEligible;
 
-    public fullTime(int employeeId, int dayOfBirth, int monthOfBirth, int yearOfBirth, int dayOfStart, int monthOfStart, int yearOfStart, String streetAddress, String city, String state, int zipCode, char sex, int phoneNumber, String title, String firstName, String lastName, double hourlyPay, double vacationTime, double personalTime, boolean receivesHealth, boolean receivesInsurance, boolean overTimeEligible) {
-        super(employeeId, dayOfBirth, monthOfBirth, yearOfBirth, dayOfStart, monthOfStart, yearOfStart, streetAddress, city, state, zipCode, sex, phoneNumber, title, firstName, lastName);
-        this.hourlyPay = hourlyPay;
-        this.vacationTime = vacationTime;
-        this.personalTime = personalTime;
+    public fullTime(int employeeId, int dayOfBirth, int monthOfBirth, int yearOfBirth, int dayOfStart,
+                    int monthOfStart, int yearOfStart, String streetAddress, String city, String state,
+                    int zipCode, char sex, String phoneNumber, String title, String firstName, String lastName,
+                    double hourlyPay, boolean receivesHealth,
+                    boolean receivesRetirement, boolean overTimeEligible) {
+        super(employeeId, dayOfBirth, monthOfBirth, yearOfBirth, dayOfStart, monthOfStart, yearOfStart, streetAddress, city, state, zipCode, sex, phoneNumber, title, firstName, lastName, hourlyPay);
+        this.vacationTime = 0;
+        this.personalTime = 0;
         this.receivesHealth = receivesHealth;
-        this.receivesRetirement = receivesInsurance;
+        this.receivesRetirement = receivesRetirement;
         this.overTimeEligible = overTimeEligible;
     }
 
-    public double getHourlyPay() {
-        return hourlyPay;
-    }
-
-    public void setHourlyPay(double hourlyPay) {
-        this.hourlyPay = hourlyPay;
+    @Override
+    public String toString() {
+        return super.toString();
     }
 
     public double getVacationTime() {
