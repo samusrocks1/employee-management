@@ -4,11 +4,12 @@ public class partTimeEmp extends employee{
         super(employeeId, dayOfBirth, monthOfBirth, yearOfBirth, dayOfStart, monthOfStart, yearOfStart, streetAddress, city, state, zipCode, sex, phoneNumber, title, firstName, lastName, hourlyPay);
     }
 
-    public void addSick(){
+       public void addSick(){
         double sickTime = this.getSickTime();
         this.setSickTime(sickTime + 2);
     }
 
+    @Override
     public double totalPay() {
         if (this.getNumberOfHours() <= 40) {
             return this.getNumberOfHours() * this.getHourlyPay();

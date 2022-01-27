@@ -32,7 +32,7 @@ public class HomeScreen {
         viewEmployee.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                ViewEmployee.main();
             }
         });
 

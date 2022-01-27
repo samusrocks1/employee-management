@@ -213,4 +213,27 @@ public class employee implements Serializable {
     public void setHourlyPay(double hourlyPay) {
         this.hourlyPay = hourlyPay;
     }
+
+    public double getVacationTime() {return 0;}
+
+    public void setVacationTime() {}
+
+    public double getPersonalTime() {return 0;};
+
+    public void setPersonalTime(double personalTime) {};
+
+    public boolean isReceivesHealth() {return false;}
+
+    public void setReceivesHealth(boolean receivesHealth) {};
+
+    public boolean isReceivesRetirement() {return false;}
+
+    public boolean isOverTimeEligible() {return true;}
+
+    public void addSick() {}
+
+    public void addVacation() {};
+
+    public double totalPay() {return 0;};
+
 }

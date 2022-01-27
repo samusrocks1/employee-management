@@ -25,6 +25,7 @@ public class fullTime extends employee implements Serializable {
         return super.toString();
     }
 
+    @Override
     public double getVacationTime() {
         return vacationTime;
     }
@@ -33,22 +34,27 @@ public class fullTime extends employee implements Serializable {
         this.vacationTime = vacationTime;
     }
 
+    @Override
     public double getPersonalTime() {
         return personalTime;
     }
 
+    @Override
     public void setPersonalTime(double personalTime) {
         this.personalTime = personalTime;
     }
 
+    @Override
     public boolean isReceivesHealth() {
         return receivesHealth;
     }
 
+    @Override
     public void setReceivesHealth(boolean receivesHealth) {
         this.receivesHealth = receivesHealth;
     }
 
+    @Override
     public boolean isReceivesRetirement() {
         return receivesRetirement;
     }
@@ -57,6 +63,7 @@ public class fullTime extends employee implements Serializable {
         this.receivesRetirement = receivesInsurance;
     }
 
+    @Override
     public boolean isOverTimeEligible() {
         return overTimeEligible;
     }
@@ -74,6 +81,7 @@ public class fullTime extends employee implements Serializable {
         setVacationTime(this.getVacationTime() + 4);
     }
 
+    @Override
     public double totalPay() {
         if (this.isOverTimeEligible()) {
             if (this.getNumberOfHours() <= 40){

@@ -234,28 +234,13 @@ public class AddEmployee {
                 else {
                     gender = 'X';
                 }
-                if (ptft.getSelection().getActionCommand().equals("Full Time")){
+                if (Objects.equals(ptft.getSelection().getActionCommand(), "Full Time")){
                     boolean health;
                     boolean retirement;
                     boolean ot;
-                    if (Objects.equals(healthYesNo.getSelection().getActionCommand(), "Yes")){
-                        health = true;
-                    }
-                    else{
-                        health = false;
-                    }
-                    if (Objects.equals(RetirementYesNo.getSelection().getActionCommand(), "Yes")) {
-                        retirement = true;
-                    }
-                    else {
-                        retirement = false;
-                    }
-                    if (Objects.equals(otYesNo.getSelection().getActionCommand(), "Yes")){
-                        ot = true;
-                    }
-                    else {
-                        ot = false;
-                    }
+                    health = Objects.equals(healthYesNo.getSelection().getActionCommand(), "Yes");
+                    retirement = Objects.equals(RetirementYesNo.getSelection().getActionCommand(), "Yes");
+                    ot = Objects.equals(otYesNo.getSelection().getActionCommand(), "Yes");
                     employees.add(new fullTime(employees.size() + 1,
                             Integer.parseInt(day.getText()),
                             Integer.parseInt(month.getText()),
